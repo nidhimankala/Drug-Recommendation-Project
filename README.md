@@ -1,39 +1,44 @@
 # Drug-Recommendation-Project
-📌 Overview
-This project aims to build a reliable drug recommendation system using collaborative filtering, autoencoders, and SVD. It helps users find over-the-counter (OTC) medications while considering drug interactions and review-based effectiveness.
 
-💡 Problem Statement
-Searching for OTC drugs online lacks clarity and accuracy.
-Current sources may miss drug interactions and rely on unreliable ratings.
-Many similar projects lack public datasets or have gone behind paywalls.
+## 📌 Overview  
+This project aims to build a **data-driven drug recommendation system** using **collaborative filtering, autoencoders, and SVD**. It helps users find **safe and effective over-the-counter (OTC) medications**, considering **drug interactions and review-based effectiveness**.  
 
-🏥 Data Sources
-Stanford BioSNAP – 5.5M+ drug-drug interaction samples.
-DrugBank – Drug ID, names, and synonyms.
-UCI Drug Review Dataset – 23K+ drug-condition-review combinations.
+## 💡 Problem Statement  
+- Searching for OTC drugs online lacks **clarity and accuracy**.  
+- Existing sources **miss drug interactions** and **rely on unreliable ratings**.  
+- Many similar projects lack **public datasets** or are hidden behind paywalls.  
 
-🛠 Methodology
-1️⃣ ALS (Alternating Least Squares)
-Treats conditions as rows and drugs as columns.
-Uses weighted ratings to improve reliability.
-Embeddings capture patterns for better recommendations.
+## 📊 Data Sources  
+| **Dataset**           | **Description**                                         |  
+|----------------------|-----------------------------------------------------|  
+| **Stanford BioSNAP** | 5.5M+ drug-drug interaction samples.                  |  
+| **DrugBank**        | Drug ID, names, and synonyms.                          |  
+| **UCI Drug Review** | 23K+ drug-condition-review combinations.                |  
 
-2️⃣ Autoencoder-Based RecSys
-Neural Network-based dimensionality reduction for user-item interactions.
-7-layer model with ReLU activation and a learning rate of 0.001.
-Trained using t-SNE for latent space visualization.
+## 🛠 Methodology  
+### **1️⃣ ALS (Alternating Least Squares)**  
+- Treats conditions as **rows** and drugs as **columns**.  
+- Uses **weighted ratings** for better reliability.  
+- Captures **hidden patterns** for improved recommendations.  
 
-3️⃣ Collaborative Filtering with SVD
-Singular Value Decomposition (SVD) on drug-condition data.
-Captures 95% of variance using 5 components.
-Ensures safe recommendations by mentioning negative drug interactions.
+### **2️⃣ Autoencoder-Based RecSys**  
+- **Neural Network-based** dimensionality reduction for user-item interactions.  
+- 7-layer model with **ReLU activation** and a **learning rate of 0.001**.  
+- **t-SNE visualization** for latent space representation.  
 
-🎯 Key Outcomes
-More reliable drug recommendations than search engines.
-Identifies harmful drug interactions users should avoid.
-Helps both general users and healthcare professionals.
+### **3️⃣ Collaborative Filtering with SVD**  
+- **Singular Value Decomposition (SVD)** on drug-condition data.  
+- Captures **95% variance** using only **5 components**.  
+- Ensures **safe recommendations** by identifying **negative drug interactions**.  
 
-📈 Results
-Successfully recommended drugs for Pneumonia with strong validation.
-MSE of 0.184 for Autoencoder-based recommendations.
-SVD captured 95% variance, ensuring high accuracy.
+## 🎯 Key Outcomes  
+✅ **More reliable drug recommendations** than traditional search engines.  
+✅ **Identifies harmful drug interactions** to ensure safety.  
+✅ **Useful for both general users and healthcare professionals.**  
+
+## 📈 Results  
+- Successfully **recommended drugs for Pneumonia** with strong validation.  
+- **MSE of 0.184** for Autoencoder-based recommendations.  
+- **SVD captured 95% variance**, ensuring high accuracy.  
+
+
